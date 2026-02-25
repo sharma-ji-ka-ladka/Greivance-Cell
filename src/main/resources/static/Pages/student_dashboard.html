@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Grievance Cell</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Student Dashboard</h1>
+
+    <h2>Raise a Grievance</h2>
+    <form id="grievanceForm">
+        <input type="text" id="title" placeholder="Grievance Title" required>
+        <textarea id="description" placeholder="Describe your issue..." required></textarea>
+
+        <select id="type" required>
+            <option value="" disabled selected>Select Type</option>
+            <option value="PUBLIC">Public</option>
+            <option value="PRIVATE">Private</option>
+        </select>
+
+        <select id="targetDepartment">
+            <option value="" disabled selected>Select Department (Optional)</option>
+            <option value="CS">Computer Science</option>
+            <option value="IT">Information Technology</option>
+            <option value="MECH">Mechanical</option>
+        </select>
+
+        <button type="submit">Submit Grievance</button>
+    </form>
+    <h2>Public & My Grievances</h2>
+    <ul id="studentGrievances"></ul>
+    <button onclick="logout()" style="background-color: #dc3545; margin-top: 20px;">Logout</button>
+</div>
+<script src="../JS/Student.js"></script>
+</body>
+</html>
